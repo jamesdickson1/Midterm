@@ -22,12 +22,12 @@ def main():
 
     for i in students:
         if course.get_seats() > 0:
+            course.update_seat_count()
             stu = c.Register(i, crn)
             print("Student Name: ", stu.get_name())
             print("Course Name: ", course.get_name())
             print("CRN: ", course.get_crn())
             print("Seats left: ", course.get_seats())
-            course.update_seat_count()
             print("")
             print("")
         else:
